@@ -14,14 +14,17 @@ Purpose of count variable in A*
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433306
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433497
 
+Not re-adding existing nodes (no error because I use adjacency dict with set rather than list)
+https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433535
+
 
 Changes made
 
+OOP inheritance for graph classes
+https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433320
+
 Long conditional line
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433568
-
-Not re-adding existing nodes
-https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433535
 
 Source/destination nodes could be the same in createRandomCompleteWeightedGraph
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433545

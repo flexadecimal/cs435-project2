@@ -5,6 +5,8 @@ class Node:
     self.val = str
   def __repr__(self):
     return self.val
+  def __lt__(self, other):
+    return self if self.val < other.val else other
 # graph class using dictionary of (node:adjacency_list) to represent graph
 class Graph:
   def __init__(self):
