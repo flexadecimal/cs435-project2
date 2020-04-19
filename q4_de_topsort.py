@@ -1,20 +1,26 @@
 from q4_b_directedgraphclass import DAG
 from q4_c_randomDAGIter import createRandomDAGIter
 from queue import Queue
+# for that one reduce line lol
+from functools import reduce
+from operator import add
 
 class TopSort:
   def __init__(self, graph):
     self.graph = graph
 
   def Kahns(self):
-    in_degree = {node:len(self.graph.adjacent(node)) for node in self.graph.nodes()}
+    # in degree is number of edges to node - have to count over whole adjacency structure
+    all_adj_lists = self.graph.node_adj_dict.values()
+    def in_deg(node):
+      return reduce(add, [1 if node in adj else 0 for adj in all_adj_lists], 0)
+    in_degree = {node:in_deg(node) for node in self.graph.nodes()}
     # queue all vertices with indegree 0
     in_deg_0 = [node for node in in_degree.keys() if in_degree[node] == 0]
     node_q = Queue()
     for node in in_deg_0:
       node_q.put(node)
     # now go through queue and queue adjacent when their indegree is 0
-    count = 0
     ordered = []
     while not node_q.empty():
       cursor = node_q.get()
@@ -23,7 +29,6 @@ class TopSort:
         in_degree[adj] -= 1
         if in_degree[adj] == 0:
           node_q.put(adj)
-      count += 1
     # return ordered output of nodes in graph
     return ordered
     
@@ -50,4 +55,4 @@ if __name__ == '__main__':
   print(graph, end="\n\n")
   sorter = TopSort(graph)
   print("Topological sort by Kahn's: {}".format(sorter.Kahns()))
-  print("Topological sort by mDFS's: {}".format(sorter.mDFS()))
+  print("Topological sort by mDFS: {}".format(sorter.mDFS()))

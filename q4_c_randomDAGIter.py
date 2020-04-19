@@ -1,5 +1,5 @@
 from q4_b_directedgraphclass import DAG
-from random import random
+from random import random, randrange
 
 def createRandomDAGIter(n):
   graph = DAG()
