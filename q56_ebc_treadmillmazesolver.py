@@ -20,7 +20,10 @@ class TreadmillMazeSolver:
       min_dist_node = pop(heap)[1]
       # go through all adjacent nodes
       for adj, weight in self.graph.adjacent(min_dist_node):
-        if (distance[adj], adj) in heap and distance[min_dist_node] != maxint and weight + distance[min_dist_node] < distance[adj]:
+        edge_in_heap = (distance[adj], adj) in heap
+        new_dist_lessthan_current = weight + distance[min_dist_node] < distance[adj];
+        has_valid_distance = distance[min_dist_node] != maxint
+        if edge_in_heap and has_valid_distance and new_dist_lessthan_current: 
           new_dist = weight + distance[min_dist_node]
           # update heap and distance
           node_idx = heap.index((distance[adj], adj))
