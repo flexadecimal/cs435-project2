@@ -10,7 +10,7 @@ def createRandomCompleteWeightedGraph(n):
   # create all edges, with random weight
   limit = n
   for a in graph.nodes():
-    for b in graph.nodes():
+    for b in [n for n in graph.nodes() if n is not a]:
       graph.addWeightedEdge(a, b,randint(0, limit))
   return graph
 
