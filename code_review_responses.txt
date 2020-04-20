@@ -1,4 +1,9 @@
+Resubmission commit:
+https://github.com/flexadecimal/cs435-project2/commit/f86855419c5cd8a1ea8a2d44f47cfd0cb34bb6af
+
+Comments made on:
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98
+
 
 Changes not made - see comment responses
 
@@ -11,7 +16,6 @@ https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a594
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433487
 
 Purpose of count variable in A*
-https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433306
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433497
 
 Not re-adding existing nodes (no error because I use adjacency dict with set rather than list)
@@ -19,6 +23,9 @@ https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a594
 
 
 Changes made
+
+Extraneous count variable in Kahn's topsort
+https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433306
 
 OOP inheritance for graph classes
 https://github.com/flexadecimal/cs435-project2/commit/69e8adaf5eff9067d17279a5940dfcac3dfcad98#r38433320
